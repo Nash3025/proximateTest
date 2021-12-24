@@ -2,7 +2,10 @@
 form {
     border: 3px solid #f1f1f1;
     width: 400px;
-    position: relative;
+    height: 250px;
+    position: fixed;
+    top: calc(50% - 125px);
+    left: calc(50% - 200px);
   }
   
   /* Full-width inputs */
@@ -40,3 +43,19 @@ form {
   }
   
   
+  .loader {
+    border: 12px solid #f3f3f3; /* Light grey */
+    border-top: 12px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

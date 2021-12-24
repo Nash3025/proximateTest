@@ -1,17 +1,28 @@
+header{
+    background-color: green;
+    padding:10px;
+    
+}
+header h1{
+    margin:0px;
+}
 #ProductsContainer{
+    margin-top: 20px;
     display: grid;
+    width: 75%;
+    float: right;
     grid-template-columns: repeat(4,1fr);
     gap:20px;
 }
 .ProductItem{
     border:1px solid black;
-    height: 300px;
+    height: 400px;
 }
 .ProductItem > img{
     object-fit:scale-down;
     height: 150px;
     width: 100%;
 }
-.ProductItem > p{
+.ProductItem > h3{
     text-align: center;
 }

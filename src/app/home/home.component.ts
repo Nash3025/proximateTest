@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { DataProducts } from '../Interfaces/DataProducts';
 import { ProductService } from '../product.service';
 import { Product } from '../Interfaces/Product';
+import { Menu } from '../Interfaces/Menu';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,8 @@ import { Product } from '../Interfaces/Product';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  productsList?: Product[];
+  productsList: Product[] =[];
+  menuList: Menu[]= [];
   constructor(private router:Router, private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -23,7 +25,8 @@ export class HomeComponent implements OnInit {
         
         let info:DataProducts = JSON.parse(products.data);
         this.productsList = info.products;
-        console.log(this.productsList)
+        this.menuList = info.menu;
+        console.log(this.menuList);
       })
     }
   }

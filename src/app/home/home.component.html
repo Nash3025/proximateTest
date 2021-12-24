@@ -1,6 +1,19 @@
-<div id="ProductsContainer">
-    <div *ngFor="let product of productsList" class="ProductItem">
-        <img src={{product.image}} alt={{product.title}}/>
-        <p>{{product.title}}</p>
+<header>
+    <h1>Create Angular App</h1>
+</header>
+
+<div id="home-section">
+    <app-menu [menuList]="menuList"></app-menu>
+    <div id="ProductsContainer">
+        <div *ngFor="let product of productsList" class="ProductItem">
+            <img src={{product.image}} alt={{product.title}}/>
+            <h3>{{product.title}}</h3>
+            <p>{{product.shortDescription}}</p>
+        </div>
     </div>
 </div>
+<footer>
+    <p>Nash3025</p>
+    <p>2021 &copy;</p>
+</footer>
+

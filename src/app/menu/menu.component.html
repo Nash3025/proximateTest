@@ -1,0 +1,11 @@
+<div  id="menu-list">
+    <ul>
+        <li *ngFor="let item of menuList" class="menu-item">
+            <a routerLink={{item.redirectTo}}>{{item.icon}}</a>
+        </li>
+        <li class="menu-item">
+            <a (click)="closeSesion()">Cerrar sesion</a>
+        </li>
+    </ul>
+</div>
+  

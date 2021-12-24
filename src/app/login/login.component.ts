@@ -19,8 +19,9 @@ export class LoginComponent implements OnInit {
     ) {}
 
   getUser(e: SubmitEvent): void {
-    this.loading=true;
+    
     if (this.user && this.password) {
+      this.loading=true;
       this.productService
         .getLogin(this.user, this.password)
         .subscribe((dataLogin) => {

@@ -1,4 +1,5 @@
-<form (submit)="getUser($event)">
+
+<form *ngIf="!loading" (submit)="getUser($event)">
     <div class="container">
       <label for="uname"><b>User</b></label>
       <input [(ngModel)]="user" type="text" placeholder="Enter Username" id="name" name="uname" required>
@@ -9,3 +10,4 @@
       <button type="submit">Login</button>
     </div>
   </form>
+  <div *ngIf="loading" class="loader"></div>
