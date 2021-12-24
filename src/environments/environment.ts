@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  productsUrl: "https://serveless.proximateapps-services.com.mx/proximatetools/dev/webadmin/testproximate/login",
+  urlHome: "https://serveless.proximateapps-services.com.mx/proximatetools/dev/webadmin/testproximate/getproducts"
 };
 
 /*

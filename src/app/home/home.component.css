@@ -1,0 +1,17 @@
+#ProductsContainer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+}
+.ProductItem{
+    border:1px solid black;
+    height: 300px;
+}
+.ProductItem > img{
+    object-fit:scale-down;
+    height: 150px;
+    width: 100%;
+}
+.ProductItem > p{
+    text-align: center;
+}
