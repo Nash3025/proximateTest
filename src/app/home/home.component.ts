@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     let userToken= localStorage.getItem('userToken');
+    document.title= "Home Proximate"
     if(!userToken){
       this.router.navigate(['login'])
     }else{  
@@ -26,7 +27,6 @@ export class HomeComponent implements OnInit {
         let info:DataProducts = JSON.parse(products.data);
         this.productsList = info.products;
         this.menuList = info.menu;
-        console.log(this.menuList);
       })
     }
   }

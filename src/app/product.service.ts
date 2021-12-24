@@ -1,22 +1,31 @@
 import { Injectable } from '@angular/core';
 import { Login } from './Interfaces/Login';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable, first, tap, map, filter } from 'rxjs';
 import { Products } from './Interfaces/Products';
-import {environment} from '../environments/environment';
+import { Product } from './Interfaces/Product';
+import { environment } from '../environments/environment';
+import { DataProducts } from './Interfaces/DataProducts';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService {
-  constructor(
-    private http:HttpClient
-  ) { }
+  constructor(private http: HttpClient) {}
 
-  getLogin(user:string, password:string): Observable<Login>{
-    return this.http.post<Login>(environment.productsUrl, {user, password})
+  getLogin(user: string, password: string): Observable<Login> {
+    return this.http.post<Login>(environment.productsUrl, { user, password });
   }
-  getProducts(userToken: string):Observable<Products>{
-    return this.http.post<Products>(environment.urlHome, {userToken})
+  getProducts(userToken: string): Observable<Products> {
+    return this.http.post<Products>(environment.urlHome, { userToken });
   }
-
+  getProduct(userToken: string, id: Number): Observable<Product[]> {
+    console.log(id);
+    return this.http.post<Products>(environment.urlHome, { userToken }).pipe(
+      map<Products, DataProducts>((product) => JSON.parse(product.data)),
+      map<DataProducts, Product[]>((dProduct) => dProduct.products),
+      map<Product[], Product[]>((products) =>
+        products.filter((product) => product.id === id)
+      )
+    );
+  }
 }

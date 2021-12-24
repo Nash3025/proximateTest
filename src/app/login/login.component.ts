@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.title = "login proximate";
     if(localStorage.getItem('userToken')){
       this.router.navigate(['home'])
     }
