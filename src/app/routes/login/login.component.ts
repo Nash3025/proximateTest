@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductService } from '../product.service';
+import { ProductService } from '../../services/product.service';
 
-import { DataLogin } from '../Interfaces/DataLogin';
+import { DataLogin } from '../../Interfaces/DataLogin';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

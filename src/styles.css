@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-:root{
-    --main-color:#04AA6D;
+:root {
+  --main-color: #04aa6d;
+  --secondary-font-color: white;
 }
-body{
-    margin:0px;
-    height: 100%;
+body {
+  margin: 0px;
+  height: 100%;
+  position: relative;
 }

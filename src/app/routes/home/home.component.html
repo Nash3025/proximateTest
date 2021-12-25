@@ -1,8 +1,5 @@
 <app-menu [menuList]="menuList"></app-menu>
-<div id="main-page">
-  <header>
-    <h1>Create Angular App</h1>
-  </header>
+<app-base>
   <div id="home-section">
     <div id="ProductsContainer">
       <a
@@ -16,9 +13,6 @@
         </div>
       </a>
     </div>
+    <app-spinner [loading]="isLoading"></app-spinner>
   </div>
-  <footer>
-    <p>Nash3025</p>
-    <p>2021 &copy;</p>
-  </footer>
-</div>
+</app-base>

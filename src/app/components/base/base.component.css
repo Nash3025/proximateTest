@@ -1,0 +1,9 @@
+#main-page {
+  width: calc(100vw - 250px);
+  left: 250px;
+  position: relative;
+  min-height: calc(100vh - 80px);
+  height: auto;
+  overflow: auto;
+  padding-bottom: 80px;
+}

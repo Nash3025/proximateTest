@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../Interfaces/Product';
+import { Product } from '../../Interfaces/Product';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs';
-import { ProductService } from '../product.service';
-import { Menu } from '../Interfaces/Menu';
-import { menuDetails } from '../utils/menuDetails';
+import { ProductService } from '../../services/product.service';
+import { Menu } from '../../Interfaces/Menu';
+import { menuDetails } from '../../utils/menuDetails';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
