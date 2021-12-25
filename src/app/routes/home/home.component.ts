@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataProducts } from '../../Interfaces/DataProducts';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../Interfaces/Product';
 import { Menu } from '../../Interfaces/Menu';
@@ -10,7 +9,7 @@ import { Menu } from '../../Interfaces/Menu';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit{
   productsList: Product[] = [];
   menuList: Menu[] = [];
   constructor(private router: Router, private productService: ProductService) {}
@@ -29,4 +28,5 @@ export class HomeComponent implements OnInit {
       });
     }
   }
+
 }

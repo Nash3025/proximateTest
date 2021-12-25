@@ -1,10 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --main-color: #04aa6d;
+  --main-color: #fa8000;
+  --secondary-color: #484a47;
   --secondary-font-color: white;
+  --main-font-color: #0c0c0c;
+  --main-border-color: #ccc;
+  --nav-color-font:#ccc;
+  --nav-color-font-hover:#f1f1f1;
 }
 body {
   margin: 0px;
   height: 100%;
   position: relative;
+  color:var(--main-font-color);
 }

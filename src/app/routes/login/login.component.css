@@ -1,10 +1,22 @@
 form {
-  border: 3px solid #f1f1f1;
+  border: 2px solid var(--main-border-color);
   width: 400px;
-  height: 250px;
-  position: fixed;
+  height: auto;
+  position: absolute;
   top: calc(50% - 125px);
   left: calc(50% - 200px);
+  border-radius: 5px;
+}
+#login-page{
+  position:relative;
+  width: 100vw;
+  height: 100vh;
+}
+#errorMessage{
+  border: 2px solid #f66;
+  background-color: salmon;
+  text-align: center;
+  color:var(--secondary-font-color);
 }
 
 /* Full-width inputs */
@@ -14,7 +26,7 @@ input[type="password"] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid var(--main-border-color);
   box-sizing: border-box;
 }
 

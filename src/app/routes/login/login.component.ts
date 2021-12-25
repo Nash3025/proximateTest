@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
-
+import {Status} from '../../Interfaces/Status'
 import { DataLogin } from '../../Interfaces/DataLogin';
 @Component({
   selector: 'app-login',
@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   user?: string;
   password?: string;
   loading=false;
+  loginStatus: Partial<Status> = {error: false};
   constructor(
     private productService: ProductService,
     private router: Router
@@ -25,11 +26,14 @@ export class LoginComponent implements OnInit {
       this.productService
         .getLogin(this.user, this.password)
         .subscribe((dataLogin) => {
+          this.loading=false;
           if (dataLogin.status) {
             let message: DataLogin = JSON.parse(dataLogin.data);
             localStorage.setItem('userToken', message.userToken);
-            this.loading=false;
             this.router.navigate(['home']);
+          }else{
+              this.loginStatus = {error:true, message:"Usuario o contraseña incorrectas"};
+              
           }
         });
     }
