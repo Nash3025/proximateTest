@@ -1,0 +1,22 @@
+#product-container{
+    text-align: center;
+    border:1px solid black;
+    margin: auto;
+    padding:20px;
+    height: 400px;
+    margin-top: 25px;
+}
+#product-container > img{
+    max-height: 180px;
+    max-width: 300px;
+    object-fit: contain;
+}
+#product-container > p{
+    text-align: justify;
+}
+@media (min-width: 720px) {
+    #product-container{
+        width: 600px;
+
+    }
+}

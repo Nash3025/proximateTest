@@ -1,0 +1,13 @@
+
+<form *ngIf="!loading" (submit)="getUser($event)">
+    <div class="container">
+      <label for="uname"><b>User</b></label>
+      <input [(ngModel)]="user" type="text" placeholder="Enter Username" id="name" name="uname" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input [(ngModel)]="password" type="password" placeholder="Enter Password" id="password" name="psw" required>
+  
+      <button type="submit">Login</button>
+    </div>
+  </form>
+<app-spinner [loading]="loading"></app-spinner>

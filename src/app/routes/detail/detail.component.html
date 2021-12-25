@@ -1,0 +1,14 @@
+<app-menu [menuList]="menuDetails"></app-menu>
+<app-base>
+   
+    <div *ngIf="productSelected && !productNotFind" id="product-container">
+        <img src={{productSelected.image}} alt={{productSelected.title}}>
+        <h3>{{productSelected.title}}</h3>
+        <p>{{productSelected.longDescription}}</p>
+    </div>  
+    <app-spinner [loading]="loading"></app-spinner>
+    <div *ngIf="productNotFind">
+        <p>Producto no encontrado</p>
+    </div>  
+
+</app-base>

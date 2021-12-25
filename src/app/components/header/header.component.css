@@ -1,0 +1,8 @@
+header {
+  background-color: var(--main-color);
+  padding: 10px;
+  box-sizing: border-box;
+}
+header h1 {
+  color: var(--secondary-font-color);
+}

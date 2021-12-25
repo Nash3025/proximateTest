@@ -1,0 +1,10 @@
+<div  class="sidenav">
+    <a 
+    *ngFor="let item of menuList" 
+    routerLink={{item.redirectTo}}>
+        {{item.icon}}
+    </a>
+    <a (click)="closeSesion()" href="#">Cerrar sesion</a>
+
+</div>
+  

@@ -1,0 +1,18 @@
+<app-menu [menuList]="menuList"></app-menu>
+<app-base>
+  <div id="home-section">
+    <div id="ProductsContainer">
+      <a
+        *ngFor="let product of productsList"
+        [routerLink]="['/detail', product.id]"
+      >
+        <div class="ProductItem">
+          <img src="{{ product.image }}" alt="{{ product.title }}" />
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.shortDescription }}</p>
+        </div>
+      </a>
+    </div>
+    <app-spinner [loading]="isLoading"></app-spinner>
+  </div>
+</app-base>
