@@ -1,16 +1,17 @@
 form {
   border: 2px solid var(--main-border-color);
-  width: 400px;
+  width: auto;
+  max-width: 500px;
   height: auto;
-  position: absolute;
-  top: calc(50% - 125px);
-  left: calc(50% - 200px);
   border-radius: 5px;
 }
 #login-page{
   position:relative;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #errorMessage{
   border: 2px solid #f66;

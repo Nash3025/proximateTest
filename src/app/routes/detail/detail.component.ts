@@ -3,8 +3,6 @@ import { Product } from '../../Interfaces/Product';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { ProductService } from '../../services/product.service';
-import { menuDetails } from '../../utils/menuDetails';
-import { ItemMenu } from 'src/app/Interfaces/ItemMenu';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
