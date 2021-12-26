@@ -1,42 +1,50 @@
 /* The sidebar menu */
 .sidenav {
-    height: auto; /* Full-height: remove this if you want "auto" height */
-    width: 200px; /* Set the width of the sidebar */
-    z-index: 1; /* Stay on top */
-    background-color: var(--secondary-color); /* Black */
-    overflow-y: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    display: inline-block;
-  }
-  
-  .sidenav li{
-    list-style-type: none;
-  }
-  .sidenav ul{
-    padding-left: 10px;
+  height: auto; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  z-index: 1; /* Stay on top */
+  background-color: var(--secondary-color); /* Black */
+  overflow-y: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  display: inline-block;
+}
+.active-link {
+  background: var(--main-color);
+}
+.active-link:hover {
+  background: var(--main-color-hover) !important;
+}
+.sidenav li {
+  list-style-type: none;
+}
+.sidenav ul {
+  padding-left: 0;
+}
+.sidenav a {
+  padding: 8px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--nav-color-font);
+  display: block;
+}
+
+.sidenav a:hover {
+  color: var(--nav-color-font-hover);
+  background: var(--secondary-color-hover);
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
   }
   .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: var(--nav-color-font);
-    display: block;
+    font-size: 18px;
   }
-  
-
-  .sidenav a:hover {
-    color: var(--nav-color-font-hover);
-  }
-  
-  /* Style page content */
-  .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
+}

@@ -1,4 +1,4 @@
-<app-base [menuList]="menuDetails">
+<app-base>
   <div *ngIf="productSelected && !productNotFind" id="product-container">
     <img src="{{ productSelected.image }}" alt="{{ productSelected.title }}" />
     <h3>{{ productSelected.title }}</h3>

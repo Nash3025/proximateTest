@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../Interfaces/Product';
 import { Menu } from '../../Interfaces/Menu';
+import { ItemMenu } from 'src/app/Interfaces/ItemMenu';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,6 @@ import { Menu } from '../../Interfaces/Menu';
 })
 export class HomeComponent implements OnInit{
   productsList: Product[] = [];
-  menuList: Menu[] = [];
   constructor(private router: Router, private productService: ProductService) {}
   isLoading = false;
   ngOnInit(): void {
@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit{
     } else {
       this.productService.getProducts(userToken).subscribe((dataProducts) => {
         this.productsList = dataProducts.products;
-        this.menuList = dataProducts.menu;
         this.isLoading = false;
       });
     }

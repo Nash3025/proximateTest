@@ -7,6 +7,15 @@
 #content-page{
   min-height: calc(100vh - 2 * var(--footer-header-height));
 }
+#menuIcon-container{
+  border-radius: 50%;
+  box-sizing: content-box;
+  padding:5px;
+  cursor: pointer;
+}
+#menuIcon-container:hover{
+  background-color: #fff3;
+}
 .menuContainer{
   background-color: var(--secondary-color);
 }

@@ -1,12 +1,12 @@
 <mat-drawer-container  autosize>
 
   <mat-drawer #drawer mode="side" class="menuContainer">
-    <app-menu [menuList]="menuList"></app-menu>
+    <app-menu></app-menu>
   </mat-drawer>
 
   <div id="main-page">
     <app-header>
-      <div (click)="drawer.toggle()">
+      <div id="menuIcon-container" (click)="drawer.toggle()">
         <div class="menuIcon"></div>
         <div class="menuIcon"></div>
         <div class="menuIcon"></div>

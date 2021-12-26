@@ -1,5 +1,6 @@
-export interface Product{
-    id: number,
+import { ItemMenu } from "./ItemMenu";
+
+export interface Product extends ItemMenu{
     image: string,
     longDescription: string,
     path: string,
