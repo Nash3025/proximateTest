@@ -1,10 +1,19 @@
-<div  class="sidenav">
-    <a 
-    *ngFor="let item of menuList" 
-    routerLink={{item.redirectTo}}>
-        {{item.icon}}
-    </a>
-    <a (click)="closeSesion()" href="#">Cerrar sesion</a>
-
-</div>
+<div class="sidenav">
   
+  <ul>
+    <li>
+      <a routerLink="/home" routerLinkActive="active-link">
+        Home
+      </a>
+    </li>
+    <li *ngFor="let item of baseMenu">
+      <a routerLink="{{ item.id}}"  routerLinkActive="active-link">
+        {{item.name}}
+      </a>
+    </li>
+    
+    <li>
+      <a (click)="closeSesion()" href="#">Cerrar sesion</a>
+    </li>
+  </ul>
+</div>

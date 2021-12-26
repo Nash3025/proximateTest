@@ -1,9 +1,27 @@
 #main-page {
-  width: calc(100vw - 250px);
+  width: 100%;
   left: 250px;
-  position: relative;
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   height: auto;
-  overflow: auto;
-  padding-bottom: 80px;
+}
+#content-page{
+  min-height: calc(100vh - 2 * var(--footer-header-height));
+}
+#menuIcon-container{
+  border-radius: 50%;
+  box-sizing: content-box;
+  padding:5px;
+  cursor: pointer;
+}
+#menuIcon-container:hover{
+  background-color: #fff3;
+}
+.menuContainer{
+  background-color: var(--secondary-color);
+}
+.menuIcon{
+  width: 35px;
+  height: 5px;
+  background-color: var(--secondary-color);
+  margin: 6px 0;
 }

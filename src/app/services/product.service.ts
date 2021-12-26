@@ -22,7 +22,6 @@ export class ProductService {
       .pipe(map<Products, DataProducts>((product) => JSON.parse(product.data)));
   }
   getProduct(userToken: string, id: Number): Observable<Product[]> {
-    console.log(id);
     return this.http.post<Products>(environment.urlHome, { userToken }).pipe(
       map<Products, DataProducts>((product) => JSON.parse(product.data)),
       map<DataProducts, Product[]>((dProduct) => dProduct.products),
