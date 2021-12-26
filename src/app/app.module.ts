@@ -12,7 +12,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BaseComponent } from './components/base/base.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,9 @@ import { BaseComponent } from './components/base/base.component';
     FormsModule,
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSidenavModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

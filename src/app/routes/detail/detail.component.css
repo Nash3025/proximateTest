@@ -1,24 +1,27 @@
 #product-container{
     text-align: center;
-    border:1px solid var(--main-border-color);
     margin: auto;
-    padding:20px;
-    height: auto;
+    padding:0px 100px;
+    min-height: inherit;
     margin-top: 25px;
     color:var(--main-font-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 #product-container > img{
-    max-height: 180px;
-    max-width: 300px;
+    max-height: 300px;
+    max-width: 900px;
     object-fit: contain;
 }
+#product-container > h3{
+    font-size: xx-large;
+    font-weight: 700;
+}
 #product-container > p{
+    font-size: large;
     text-align: justify;
     
-}
-@media (min-width: 720px) {
-    #product-container{
-        width: 600px;
-
-    }
 }
